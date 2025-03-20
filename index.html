@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>年度末更新作業ヘルプ│宿題配信サービス</title>
+    <title>使い方とFAQ</title>
     <style>
+        /* 全体のスタイル */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
@@ -15,7 +16,7 @@
         }
         .container {
             max-width: 900px;
-            margin: 50px auto;
+            margin: 90px auto; /* 上部の流れる文字分の余白を調整 */
             padding: 20px;
             background: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -81,9 +82,41 @@
             font-size: 14px;
             color: #757575;
         }
+
+        /* 流れる文字のスタイル */
+        .marquee {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 10px 0;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .marquee span {
+            display: inline-block;
+            animation: scroll-horizontal 15s linear infinite; /* スクロール速度をゆっくりに調整 */
+        }
+        @keyframes scroll-horizontal {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- 流れる文字 -->
+    <div class="marquee">
+        <span>【重要】2025年3月31日をもちまして、Canva版宿題配信の提供を終了します。更新作業が必要になりますのでよろしくお願いします。</span>
+    </div>
+
     <div class="container">
         <h1>使い方とFAQ</h1>
 
