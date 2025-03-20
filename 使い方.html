@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使い方とFAQ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 20px;
+            border-bottom: 2px solid #90caf9;
+            padding-bottom: 5px;
+            color: #0d47a1;
+        }
+        p, ul {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        ul li strong {
+            color: #1976d2;
+        }
+        .note {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            background: #1976d2;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px 15px;
+            background: #e3f2fd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>使い方とFAQ</h1>
+
+        <!-- 使い方セクション -->
+        <h2>使い方</h2>
+        <p>このサービスは以下の動作環境で動作します。対象のデバイスやブラウザをご確認ください。</p>
+        <p class="note">※モバイルデータ通信をご利用の際は通信量にご注意ください。</p>
+
+        <h2>動作環境</h2>
+        <ul>
+            <li><strong>対応OS:</strong> Windows (7, 8, 8.1, 10, 11 Home/Pro Edition)、Androidデバイス</li>
+            <li><strong>インターネット接続:</strong> Wi-Fi推奨、モバイルデータ通信可（通信量要注意）</li>
+            <li><strong>ブラウザ要件:</strong> Google Chrome, Firefox, Edge などの最新ブラウザ</li>
+        </ul>
+
+        <h2>注意事項</h2>
+        <ul>
+            <li><strong>Canvaの埋め込みリンク:</strong> このサービスではリンクを1分ごとに更新します。バッテリーや通信環境に影響する可能性があるため、<span class="note">長時間の利用は避ける</span>よう推奨します。</li>
+        </ul>
+
+        <!-- FAQセクション -->
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <button class="faq-question">質問 1: サービスは無料ですか？</button>
+            <div class="faq-answer">はい、基本的な機能は無料でご利用いただけます。</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">質問 2: 対応しているブラウザは？</button>
+            <div class="faq-answer">Google Chrome、Firefox、Microsoft Edgeなど最新のブラウザに対応しています。</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">質問 3: これからどのように対応すればよいですか？</button>
+            <div class="faq-answer">GitHubとCanvaの埋め込みリンクを作成できる環境が必要です。※ドメイン名は各校で決めてください。作り方はご登録校にはパンフレットと学校内フリーパスをお送りいたします。</div>
+        </div>
+    </div>
+
+    <footer>© 2025 サービス運営チーム</footer>
+
+    <script>
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                answer.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
